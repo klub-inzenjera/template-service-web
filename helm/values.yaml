@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: your-registry/your-react-frontend
+  repository: ghcr.io/klub-inzenjera/template-service-web
   tag: latest
   pullPolicy: IfNotPresent
 
