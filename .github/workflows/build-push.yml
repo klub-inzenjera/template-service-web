@@ -4,15 +4,17 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  packages: write
+
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
 
 jobs:
   docker-build-push-ghcr:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
