@@ -3,6 +3,9 @@ on:
   repository_dispatch:
     types: [init]
 
+permissions:
+  contents: write
+
 jobs:
   init:
     runs-on: ubuntu-latest
