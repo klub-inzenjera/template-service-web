@@ -16,7 +16,7 @@ jobs:
 
       - name: Replace Helm placeholders
         run: |
-          find charts -type f -name "values.yaml" -exec sed -i "s/{{ service_name }}/${{ steps.vars.outputs.repo_name }}/g" {} \;
+          find helm -type f -name "values.yaml" -exec sed -i "s/{{ service_name }}/${{ steps.vars.outputs.repo_name }}/g" {} \;
 
       - name: Delete this workflow
         run: |
