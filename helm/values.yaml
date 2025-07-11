@@ -1,7 +1,9 @@
 replicaCount: 1
 
+name: {{ service_name }}
+
 image:
-  repository: ghcr.io/klub-inzenjera/template-service-web
+  repository: ghcr.io/klub-inzenjera/{{ service_name }}
   tag: latest
   pullPolicy: IfNotPresent
 
